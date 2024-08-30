@@ -47,5 +47,5 @@
 2. Установите зависимости: `pip install -r requirements.txt`
 3. Запустите скрипт: `python main.py`
 
-## Покрытие тестами
+## Покрытие тестами:
 ![img_1.png](img_1.png)

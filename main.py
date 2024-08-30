@@ -1,8 +1,10 @@
 from src.API_client import HeadHunterAPI
-from src.functional import Vacancy, get_vacancy_description, JSONSaver
+from src.functional import get_vacancy_description
+from src.classes import Vacancy, JSONSaver
+from typing import List
 
 
-def get_vacancies_from_hh(keyword):
+def get_vacancies_from_hh(keyword: str) -> List[Vacancy]:
     """Получение вакансий с HeadHunter по ключевому слову"""
     hh_api = HeadHunterAPI()
     vacancies_data = hh_api.get_vacancies(keyword)
@@ -21,7 +23,7 @@ def get_vacancies_from_hh(keyword):
     return vacancies
 
 
-def user_interaction():
+def user_interaction() -> None:
     """Функция для взаимодействия с пользователем через консоль"""
     while True:
         print("\nМеню:")
